@@ -31,11 +31,18 @@ function print takes string s returns nothing
     call DisplayTimedTextToPlayer(Player(0), 0, 0, 60, s)
 endfunction
 
+function log takes string s returns nothing
+    call Preload(s)
+endfunction
+
 function assert takes string msg, boolean result returns nothing
     if result then
 	call print("ok "+ I2S(assert_count) + " - " + msg)
+	call log("ok "+ I2S(assert_count) + " - " + msg)
     else
 	call print("not ok " + I2S(assert_count) +" - " + msg)
+	call log("not ok " + I2S(assert_count) +" - " + msg)
+	call PreloadGenEnd("jhcr-tests/result.txt")
 	call I2S(1 / 0)
     endif
     set assert_count = assert_count + 1
@@ -44,12 +51,15 @@ endfunction
 function OnReload takes nothing returns nothing
     local integer status = JHCR_API_GetLastStatus()
     local integer seq = JHCR_API_GetSeqNumber()
-    //call assert("Reload #"+I2S(seq-1)+" worked", status == 1)
-    //call print("Executing jhcr_test_"+I2S(seq-1))
-    call ExecuteFunc("jhcr_test_"+I2S(seq-1))
+    if status == 2 then
+	call PreloadGenEnd("jhcr-tests/result.txt")
+    else
+	call ExecuteFunc("jhcr_test_"+I2S(seq-1))
+    endif
 endfunction
 
 function start_tests takes nothing returns nothing
+    call PreloadGenStart()
     call assert("Map loads", true)
     // our setup will generate all the preload files so we can directly
     // jump into the chain.
@@ -58,7 +68,7 @@ endfunction
 
 function reload_script takes nothing returns nothing
     // call BJDebugMsg("Reloading script...")
-    call ExecuteFunc("JHCR_Init_parse")
+    // call ExecuteFunc("JHCR_Init_parse")
 endfunction
 
 
