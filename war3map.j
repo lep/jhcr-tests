@@ -109,6 +109,9 @@ function config takes nothing returns nothing
     call SetStartLocPrio(0,0,1,MAP_LOC_PRIO_HIGH)
 endfunction
 
+function jhcr_test_7_8_9_helper takes nothing returns nothing
+endfunction
+
 function jhcr_test_action  takes nothing returns nothing
     call assert("using code in interpreter works", true)
     call ExecuteFunc("JHCR_Init_parse")
@@ -116,4 +119,7 @@ endfunction
 
 function jhcr_test_10_helper takes nothing returns boolean
     return false
+endfunction
+
+function jhcr_test_12_helper takes nothing returns nothing
 endfunction
