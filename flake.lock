@@ -1,0 +1,163 @@
+{
+  "nodes": {
+    "common-j": {
+      "inputs": {
+        "flake-utils": [
+          "jhcr",
+          "flake-utils"
+        ],
+        "nixpkgs": [
+          "jhcr",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1676728612,
+        "narHash": "sha256-Hhp8PMvnUkQ8gMnM3VjTq51LkdzjRyl9Tsg0t7Q1+g4=",
+        "owner": "lep",
+        "repo": "common-j",
+        "rev": "329882d10ff54817d719db539f53c399f9bb913b",
+        "type": "github"
+      },
+      "original": {
+        "owner": "lep",
+        "repo": "common-j",
+        "type": "github"
+      }
+    },
+    "flake-utils": {
+      "locked": {
+        "lastModified": 1676283394,
+        "narHash": "sha256-XX2f9c3iySLCw54rJ/CZs+ZK6IQy7GXNY4nSOyu2QG4=",
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "rev": "3db36a8b464d0c4532ba1c7dda728f4576d6d073",
+        "type": "github"
+      },
+      "original": {
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "type": "github"
+      }
+    },
+    "flake-utils_2": {
+      "locked": {
+        "lastModified": 1676283394,
+        "narHash": "sha256-XX2f9c3iySLCw54rJ/CZs+ZK6IQy7GXNY4nSOyu2QG4=",
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "rev": "3db36a8b464d0c4532ba1c7dda728f4576d6d073",
+        "type": "github"
+      },
+      "original": {
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "type": "github"
+      }
+    },
+    "flake-utils_3": {
+      "locked": {
+        "lastModified": 1676283394,
+        "narHash": "sha256-XX2f9c3iySLCw54rJ/CZs+ZK6IQy7GXNY4nSOyu2QG4=",
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "rev": "3db36a8b464d0c4532ba1c7dda728f4576d6d073",
+        "type": "github"
+      },
+      "original": {
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "type": "github"
+      }
+    },
+    "jhcr": {
+      "inputs": {
+        "common-j": "common-j",
+        "flake-utils": "flake-utils",
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1701275272,
+        "narHash": "sha256-BSaXhc/trXu93XjJHkXIvb/laS6/YHmUcIiGQRDqSdo=",
+        "owner": "lep",
+        "repo": "jhcr",
+        "rev": "705ea5a065d0011ceaa99f2722f1dc1b4d3b330b",
+        "type": "github"
+      },
+      "original": {
+        "owner": "lep",
+        "repo": "jhcr",
+        "type": "github"
+      }
+    },
+    "mpq": {
+      "inputs": {
+        "flake-utils": "flake-utils_2",
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1677930309,
+        "narHash": "sha256-pwW12H3Sd+egspa91pPduvYT3jGpmaK9onZghS87KMk=",
+        "owner": "lep",
+        "repo": "mpq-hs",
+        "rev": "97ceb921d2d5fc374037d52cfc94b5e0c40e0ec2",
+        "type": "github"
+      },
+      "original": {
+        "owner": "lep",
+        "repo": "mpq-hs",
+        "type": "github"
+      }
+    },
+    "nixpkgs": {
+      "locked": {
+        "lastModified": 1701683187,
+        "narHash": "sha256-W1s7FxK+k900nGqlpnoFyOTXKWsaIQsACPq+nrVCmQ0=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "246e74513f2ecb89840fbbee1d3e5d7bfda5876b",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "pjass": {
+      "inputs": {
+        "flake-utils": "flake-utils_3",
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1701211046,
+        "narHash": "sha256-JCNWln4t7gdbK4CrMcz2lOJKF9b8sWJz4r/Ec4bBeXk=",
+        "owner": "lep",
+        "repo": "pjass",
+        "rev": "22c3fbcb34640937a03f38ff4dcdc2acfcb6ae61",
+        "type": "github"
+      },
+      "original": {
+        "owner": "lep",
+        "repo": "pjass",
+        "type": "github"
+      }
+    },
+    "root": {
+      "inputs": {
+        "jhcr": "jhcr",
+        "mpq": "mpq",
+        "nixpkgs": "nixpkgs",
+        "pjass": "pjass"
+      }
+    }
+  },
+  "root": "root",
+  "version": 7
+}
